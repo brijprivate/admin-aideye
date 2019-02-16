@@ -1,0 +1,31 @@
+<!-- 
+<app-navbar></app-navbar> -->
+<nav class="navbar " id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <img (click)="godash()" src="../../assets/img/logo.png" alt="logo" class="logo" >
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+       
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li (click)="selectlink('Home')"  [ngClass]="{classes: selected=='dashboard'}" ><a [routerLink]="['dashboard']">dashboard</a></li> -->
+  
+          <li (click)="selectlink('Subscription')"  ><a [routerLink]="['subscription']"><span class="glyphicon glyphicon-user"></span> <span class="num">12</span> </a></li>
+          <li (click)="selectlink('userlist')" ><a [routerLink]="['userlist']"><span class="glyphicon glyphicon-eur"></span><span class="num">10</span>  </a></li>
+          <li (click)="logout()"  ><a><span class="glyphicon glyphicon-off"></span> </a></li>
+  
+          <!-- <li (click)="selectlink('Login')"  [ngClass]="{classes: selected=='Login'}"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up / Login</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <router-outlet></router-outlet>
+  
+ 

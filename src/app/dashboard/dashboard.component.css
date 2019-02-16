@@ -1,0 +1,9 @@
+.main {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 27px;
+
+}
