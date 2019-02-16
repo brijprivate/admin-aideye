@@ -1,26 +1,25 @@
 <div class="main">
   <div class="model">
     <img src="../../assets/img/face.jpeg" alt="">
-    <p class="name">Brij Singh</p>
+    <p class="name">{{user.name}}</p>
     <div class="left">
-        <p><i class="fa fa-envelope"></i>contactme@anywhere.com</p>
+      <p><i class="fa fa-envelope"></i>{{user.email}}</p>
 
-        <p><i class="fa fa-phone-square"></i>
-          12345698755</p>
-        <p><i class="fa fa-map-marker" aria-hidden="true"></i>
-          muchipara, durgapur,near iti
-    
-        </p>
-    
-        <h4 class="member">Gold membership</h4>
-        <p><i class="fa fa-calendar" aria-hidden="true"></i>
-          27th january 2019 <span>(start date)</span> </p>
-        <p><i class="fa fa-calendar" aria-hidden="true"></i>
-          27th january 2020<span>(end date)</span> </p>
+      <p><i class="fa fa-phone-square"></i>
+        {{user.phone}}</p>
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+        {{user.address}},{{user.zipcode}}
+      </p>
+
+      <h4 class="member">{{user.subscription[user.subscription.length-1].id.name}} membership</h4>
+      <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        {{user.subscription[user.subscription.length-1].startDate.substring(0,15)}} <span>(start date)</span> </p>
+      <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        {{subsendDate}}<span>(end date)</span> </p>
     </div>
 
 
   </div>
-  <p class="reg"> this user has registerd on 27th december 2018</p>
+  <p class="reg"> this user has registerd on {{regDate}}</p>
 
 </div>

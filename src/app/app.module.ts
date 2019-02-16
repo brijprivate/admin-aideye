@@ -9,12 +9,16 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { SublistComponent } from './sublist/sublist.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { FormsModule } from '@angular/forms';
+import { HttpService } from './http.service';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: NavbarComponent,
+  {
+    path: 'home', component: NavbarComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
@@ -39,9 +43,11 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true }
     ),
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

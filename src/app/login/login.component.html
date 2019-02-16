@@ -1,32 +1,32 @@
 <div class="main">
 
   <div class="text">
-      <img src="../../assets/img/logo.png" alt="">
-      <p>
-        Admin Login
-      </p>
+    <img src="../../assets/img/logo.png" alt="">
+    <p>
+      Admin Login
+    </p>
   </div>
   <div class="model">
 
-<div class="floating-form">
-    <div class="floating-label">      
-      <input class="floating-input" type="text" placeholder=" ">
-      <span class="highlight"></span>
-      <label>Username</label>
+    <div class="floating-form">
+      <div class="floating-label">
+        <input [(ngModel)]="username" class="floating-input" type="text" placeholder=" ">
+        <span class="highlight"></span>
+        <label>Username</label>
+      </div>
+
+
+
+
+      <div class="floating-label">
+        <input class="floating-input" [(ngModel)]="password" type="password" placeholder=" ">
+        <span class="highlight"></span>
+        <label>Password</label>
+      </div>
+      <button type="button" class="btn btn-default" (click)="submit()">Login</button>
+
+
     </div>
-
- 
-
-
-    <div class="floating-label">      
-      <input class="floating-input" type="password" placeholder=" ">
-      <span class="highlight"></span>
-      <label>Password</label>
-    </div>
-    <button type="button" class="btn btn-default" (click)="submit()" >Login</button>
-
- 
-</div>
 
   </div>
 </div>
