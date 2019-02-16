@@ -1,6 +1,7 @@
 <div class="main">
   <div class="model">
-    <img src="../../assets/img/face.jpeg" alt="">
+      <img src="{{(user.imageId)?'https://api.aideye.org/file?file='+user.imageId:'../../assets/img/avatar.png'}}"
+      alt="">
     <p class="name">{{user.name}}</p>
     <div class="left">
       <p><i class="fa fa-envelope"></i>{{user.email}}</p>
