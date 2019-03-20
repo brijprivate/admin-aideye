@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class HttpService {
 
-  public baseURL: string = "http://ec2-52-15-71-3.us-east-2.compute.amazonaws.com:32951";
+  public baseURL: string = "https://api.aideye.org";
 
   public usercount = new BehaviorSubject(0);
   getUserCount = this.usercount.asObservable();
